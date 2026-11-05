@@ -1,4 +1,0 @@
-L3T1 DoublyList 3
-x
-y
-z

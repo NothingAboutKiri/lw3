@@ -1,4 +1,0 @@
-L3T1 ChainHashTable 3
-apple	1
-plum	3
-pear	2
