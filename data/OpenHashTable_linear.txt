@@ -1,0 +1,4 @@
+L3T1 OpenHashTable/linear 3
+pear	2
+plum	3
+apple	1

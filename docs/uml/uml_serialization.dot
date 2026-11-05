@@ -1,0 +1,17 @@
+digraph G {
+rankdir=BT; nodesep=0.35; ranksep=0.55;
+node [shape=plain, fontname="DejaVu Sans", fontsize=10]; edge [fontname="DejaVu Sans", fontsize=9];
+"Format" [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" bgcolor="#ffffff"><tr><td><font point-size="10">«enumeration»</font></td></tr><tr><td bgcolor="#dbe8f7"><b>Format</b></td></tr><tr><td align="left" balign="left">Binary<br align="left"/>Text<br align="left"/></td></tr><tr><td> </td></tr></table>>];
+"codec" [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" bgcolor="#ffffff"><tr><td><font point-size="10">«namespace»</font></td></tr><tr><td bgcolor="#dbe8f7"><b>codec</b></td></tr><tr><td> </td></tr><tr><td align="left" balign="left">+write_u32 / read_u32<br align="left"/>+write_string / read_string<br align="left"/>+write_binary_header(out, type, count)<br align="left"/>+read_binary_header(in, type) : uint32<br align="left"/>+write_json(out, type, values)<br align="left"/>+read_json(in, type) : Array<br align="left"/>-JsonString / WriteItem / ParseJson (ЛР №1)<br align="left"/></td></tr></table>>];
+"Serializable" [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" bgcolor="#ffffff"><tr><td><font point-size="10">«interface»</font></td></tr><tr><td bgcolor="#dbe8f7"><b><i>Serializable</i></b></td></tr><tr><td> </td></tr><tr><td align="left" balign="left"><i>+save_binary / load_binary</i><br align="left"/><i>+save_text / load_text</i><br align="left"/>+save / load (out, Format)<br align="left"/>+save_file / load_file (path, Format)<br align="left"/></td></tr></table>>];
+"Sequence" [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" bgcolor="#ffffff"><tr><td bgcolor="#dbe8f7"><b><i>Sequence</i></b></td></tr><tr><td> </td></tr><tr><td align="left" balign="left">+save_binary: заголовок + строки<br align="left"/>+save_text: {&quot;Тип&quot;: [значения]}<br align="left"/></td></tr></table>>];
+"HashTable" [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" bgcolor="#ffffff"><tr><td bgcolor="#dbe8f7"><b><i>HashTable</i></b></td></tr><tr><td> </td></tr><tr><td align="left" balign="left">+save_binary: заголовок + пары<br align="left"/>+save_text: [k1, v1, k2, v2]<br align="left"/></td></tr></table>>];
+"RBTree" [label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4" bgcolor="#ffffff"><tr><td bgcolor="#dbe8f7"><b>RBTree</b></td></tr><tr><td> </td></tr><tr><td align="left" balign="left">+save_binary / save_text: метки 20(B) (preorder)<br align="left"/>-attach(key, red)<br align="left"/>-load_labels(labels): проверка свойств<br align="left"/></td></tr></table>>];
+Sequence -> Serializable [arrowhead=empty, arrowsize=1.1]
+HashTable -> Serializable [arrowhead=empty, arrowsize=1.1]
+RBTree -> Sequence [arrowhead=empty, arrowsize=1.1]
+Serializable -> Format [style=dashed, arrowhead=vee, label=" «use»"]
+Sequence -> codec [style=dashed, arrowhead=vee, label=" «use»"]
+HashTable -> codec [style=dashed, arrowhead=vee, label=" «use»"]
+RBTree -> codec [style=dashed, arrowhead=vee, label=" «use»"]
+}

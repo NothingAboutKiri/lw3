@@ -1,0 +1,115 @@
+2026-11-04T20:07:22+07:00
+Running ./cpp/build/bench
+Run on (16 X 3201 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x8)
+  L1 Instruction 32 KiB (x8)
+  L2 Unified 512 KiB (x8)
+  L3 Unified 16384 KiB (x1)
+Load Average: 1.25, 0.86, 0.60
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+***WARNING*** Library was built as DEBUG. Timings may be affected.
+--------------------------------------------------------------------------
+Benchmark                                Time             CPU   Iterations
+--------------------------------------------------------------------------
+BM_ArrayPushBack/100                  2049 ns         2049 ns         6522
+BM_ArrayPushBack/1000                17466 ns        17456 ns          812
+BM_ArrayPushBack/10000              736552 ns       735700 ns           20
+BM_ArrayPushBack/100000            5615735 ns      5616404 ns            3
+BM_ArrayPushBack_BigO                56.33 N         56.33 N    
+BM_ArrayPushBack_RMS                     6 %             6 %    
+BM_ArrayInsertFront/100              25026 ns        25025 ns          556
+BM_ArrayInsertFront/1000           2505181 ns      2503332 ns            6
+BM_ArrayInsertFront/10000        231105068 ns    231072317 ns            1
+BM_ArrayInsertFront_BigO              2.31 N^2        2.31 N^2  
+BM_ArrayInsertFront_RMS                  0 %             0 %    
+BM_SinglyListPushFront/100            2250 ns         2249 ns         6220
+BM_SinglyListPushFront/1000          22623 ns        22623 ns          613
+BM_SinglyListPushFront/10000        231617 ns       231613 ns           58
+BM_SinglyListPushFront/100000      2533593 ns      2533533 ns            5
+BM_SinglyListPushFront_BigO          25.31 N         25.31 N    
+BM_SinglyListPushFront_RMS               2 %             2 %    
+BM_SinglyListContains/100              138 ns          138 ns        99967
+BM_SinglyListContains/1000            1451 ns         1450 ns         9734
+BM_SinglyListContains/10000          14003 ns        14004 ns          972
+BM_SinglyListContains/100000        138529 ns       138525 ns          103
+BM_SinglyListContains_BigO            1.39 N          1.39 N    
+BM_SinglyListContains_RMS                0 %             0 %    
+BM_DoublyListPushPopBack/100          2566 ns         2566 ns         5464
+BM_DoublyListPushPopBack/1000        25988 ns        25991 ns          538
+BM_DoublyListPushPopBack/10000      264610 ns       264613 ns           51
+BM_DoublyListPushPopBack/100000    2880431 ns      2880325 ns            5
+BM_DoublyListPushPopBack_BigO        28.78 N         28.78 N    
+BM_DoublyListPushPopBack_RMS             1 %             1 %    
+BM_StackPushPop/100                   2801 ns         2801 ns         4991
+BM_StackPushPop/1000                 27950 ns        27949 ns          501
+BM_StackPushPop/10000               285173 ns       285169 ns           47
+BM_StackPushPop/100000             3055156 ns      3055268 ns            4
+BM_StackPushPop_BigO                 30.53 N         30.53 N    
+BM_StackPushPop_RMS                      1 %             1 %    
+BM_QueuePushPop/100                   2691 ns         2691 ns         5179
+BM_QueuePushPop/1000                 27113 ns        27114 ns          513
+BM_QueuePushPop/10000               276350 ns       276350 ns           49
+BM_QueuePushPop/100000             3153198 ns      3149490 ns            4
+BM_QueuePushPop_BigO                  1.90 NlgN       1.90 NlgN 
+BM_QueuePushPop_RMS                      1 %             1 %    
+BM_ChainPut/100                       5267 ns         5264 ns         2700
+BM_ChainPut/1000                     85100 ns        85102 ns          164
+BM_ChainPut/10000                  1102287 ns      1102291 ns           13
+BM_ChainPut/100000                15216241 ns     15216742 ns            1
+BM_ChainPut_BigO                      9.16 NlgN       9.16 NlgN 
+BM_ChainPut_RMS                          1 %             1 %    
+BM_LinearPut/100                      9356 ns         9356 ns         1498
+BM_LinearPut/1000                    97316 ns        97321 ns          139
+BM_LinearPut/10000                 1742792 ns      1742814 ns            6
+BM_LinearPut/100000               28463900 ns     28464782 ns            1
+BM_LinearPut_BigO                    17.11 NlgN      17.11 NlgN 
+BM_LinearPut_RMS                         4 %             4 %    
+BM_DoublePut/100                     10703 ns        10703 ns         1299
+BM_DoublePut/1000                   106435 ns       106446 ns          127
+BM_DoublePut/10000                 1832079 ns      1832130 ns            7
+BM_DoublePut/100000               31297901 ns     31298251 ns            1
+BM_DoublePut_BigO                    18.81 NlgN      18.81 NlgN 
+BM_DoublePut_RMS                         4 %             4 %    
+BM_ChainGet/100                       17.9 ns         17.9 ns       774002
+BM_ChainGet/1000                      20.9 ns         20.9 ns       683813
+BM_ChainGet/10000                     31.1 ns         31.1 ns       435223
+BM_ChainGet/100000                    48.1 ns         48.1 ns       304002
+BM_ChainGet_BigO                      2.58 lgN        2.58 lgN  
+BM_ChainGet_RMS                         13 %            13 %    
+BM_LinearGet/100                      22.5 ns         22.5 ns       619704
+BM_LinearGet/1000                     30.7 ns         30.7 ns       455685
+BM_LinearGet/10000                    39.8 ns         39.8 ns       362130
+BM_LinearGet/100000                   73.8 ns         73.8 ns       177220
+BM_LinearGet_BigO                     3.71 lgN        3.71 lgN  
+BM_LinearGet_RMS                        20 %            20 %    
+BM_DoubleGet/100                      23.7 ns         23.7 ns       584806
+BM_DoubleGet/1000                     29.9 ns         29.9 ns       461521
+BM_DoubleGet/10000                    42.1 ns         42.1 ns       336919
+BM_DoubleGet/100000                   87.4 ns         87.4 ns       123121
+BM_DoubleGet_BigO                     4.14 lgN        4.14 lgN  
+BM_DoubleGet_RMS                        28 %            28 %    
+BM_RBTreeInsert/100                  34548 ns        34548 ns          404
+BM_RBTreeInsert/1000                520166 ns       520214 ns           27
+BM_RBTreeInsert/10000              7116185 ns      7116311 ns            2
+BM_RBTreeInsert/100000           103074501 ns    103074209 ns            1
+BM_RBTreeInsert_BigO                 62.00 NlgN      62.00 NlgN 
+BM_RBTreeInsert_RMS                      2 %             2 %    
+BM_RBTreeContains/100                  248 ns          248 ns        56189
+BM_RBTreeContains/1000                 416 ns          416 ns        33706
+BM_RBTreeContains/10000                584 ns          584 ns        23765
+BM_RBTreeContains/100000               698 ns          698 ns        20374
+BM_RBTreeContains_BigO               42.19 lgN       42.19 lgN  
+BM_RBTreeContains_RMS                    4 %             4 %    
+BM_Serialize/binary/100               7873 ns         7873 ns         1781
+BM_Serialize/binary/1000             72960 ns        72960 ns          194
+BM_Serialize/binary/10000           873389 ns       873409 ns           17
+BM_Serialize/binary/100000         8102186 ns      8102408 ns            2
+BM_Serialize/binary_BigO             81.08 N         81.09 N    
+BM_Serialize/binary_RMS                  1 %             1 %    
+BM_Serialize/text/100                 9522 ns         9521 ns         1471
+BM_Serialize/text/1000               86110 ns        86057 ns          165
+BM_Serialize/text/10000             951842 ns       951782 ns           15
+BM_Serialize/text/100000           9199691 ns      9200086 ns            2
+BM_Serialize/text_BigO               92.03 N         92.03 N    
+BM_Serialize/text_RMS                    1 %             1 %    
